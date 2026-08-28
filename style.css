@@ -1,8 +1,8 @@
 /* Reset */ 
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Henter inn den fonten som mangler fra style-guide-filen. */
@@ -59,6 +59,7 @@ body {
   background-position: top 0 right 2rem;
 }
  
+/* Innstillinger for de andre testimonial-kortene */
 .testimonial-card:not(.featured):nth-of-type(2) {
   background-color: var(--grey-500);
 }
@@ -73,7 +74,7 @@ body {
   box-shadow: 0 25px 25px -20px rgba(0, 0, 0, 0.1);
 }
  
-/* Header: avatar + name + title */
+/* Justering av de forskjellige avatar-bildene */
 .testimonial-card > img[alt$="Clifford"],
 .testimonial-card > img[alt$="Walters"],
 .testimonial-card > img[alt$="Harmon"],
@@ -87,6 +88,7 @@ body {
   margin-right: 1rem;
 }
  
+/* Innstillinger for navnet og tittelen til de forskjellige personene */
 .testimonial-card h3 {
   font-size: 14px;
   font-weight: 600;
@@ -99,7 +101,7 @@ body {
   opacity: 0.7;
 }
  
-/* Quote + testimonial text */
+/* Sitat og testimonialtekst */
 .testimonial-card .quote {
   clear: both;
   font-size: 16px;
@@ -117,7 +119,7 @@ body {
   margin-top: 1rem;
 }
  
-/* Text color per card type */
+/* Tekstfarger basert på korttype */
 .testimonial-card.featured h3,
 .testimonial-card.featured .quote,
 .testimonial-card.featured .testimonial-text,
@@ -145,14 +147,14 @@ body {
   color: var(--grey-500);
 }
  
-/* Footer */
+/* Innstillinger for footeren */
 .attribution {
   margin-top: 2rem;
 }
  
-/* ---------------------------------- */
-/* Desktop grid — 4 columns x 2 rows  */
-/* ---------------------------------- */
+
+/* Konfigurering av desktop-grid — 4 kolonner x 2 rader  */
+
 @media (min-width: 1000px) {
   .testimonial-container {
     max-width: 1110px;
@@ -161,6 +163,8 @@ body {
     gap: 1.5rem;
   }
  
+  /* Plassering av de forskjellige testimonial-kortene i gridet */
+
   .testimonial-card.featured {
     grid-column: span 2;
     grid-row: 1;
@@ -180,7 +184,11 @@ body {
     grid-column: 2 / span 2;
     grid-row: 2;
   }
- 
+  
+  /* Det femte kortet i griden skiller seg ut fra de andre ved å strekke seg over to rader, og plasseres i kolonne 4 */
+  
   .testimonial-card:not(.featured):nth-of-type(5) {
-    grid-column: 4;
-    grid-row: 1 / span 2;
+  grid-column: 4;
+  grid-row: 1 / span 2;
+}
+}
